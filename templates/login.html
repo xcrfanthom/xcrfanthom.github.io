@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/styles/login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="../static/scripts/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="POST" id="loginForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" class="input-field" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" class="input-field" required><br><br>
+            <input type="submit" value="Login" class="submit-btn">
+        </form>
+        <p>Don't have an account? <a href="/register" id="register">Register</a></p>
+        <p>Forgot your password? <a href="/reset_password" id="forgotPasswordLink">Reset Password</a></p>
+    </div>
+</body>
+</html>

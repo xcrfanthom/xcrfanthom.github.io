@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="../static/styles/chat.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="../static/scripts/chat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="messages"></div>
+        <div id="systemMessages"></div>
+        <form id="messageForm">
+            <div id="chat-messages"></div>
+            <input id="messageInput" autocomplete="off" placeholder="Type your message..." />
+            <button>Send</button>
+        </form>
+        <button id="logoutBtn">Logout</button>
+    </div>
+</body>
+</html>
